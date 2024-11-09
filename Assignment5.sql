@@ -65,7 +65,11 @@ FROM Persons
 GROUP BY Country_name
 HAVING Total_Population > 50000;
 
-
+SELECT Country_name, COUNT(*) AS Total_Persons, AVG(Rating) AS Avg_Rating
+FROM Persons
+GROUP BY Country_name
+HAVING COUNT(*) > 2
+ORDER BY Avg_Rating ASC;
 
 
 
